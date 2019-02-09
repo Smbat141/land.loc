@@ -20,7 +20,7 @@
                     <th>{{ $page->created_at }}</th>
                     <th>
                         {!! Form::open(['url' => route('pagesEdit',['page' => $page->id]),'class'=>'form-horizontal','method'=>'post'])!!}
-                            {!! Form::hidden('action','deleted') !!}
+                            {{method_field('DELETE')}}
                             {!! Form::button('Delete',['class'=>'btn btn-danger','type'=>'submit'] )!!}
                         {!! Form::close() !!}
                     </th>
